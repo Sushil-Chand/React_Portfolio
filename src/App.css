@@ -19,7 +19,7 @@ html{
 
 
 body{
-  font-family:'Josefin Sans', sans-serif;
+  font-family:"Josefin Sans", sans-serif;
   color: #000;
   font-Size:16px;
   font-weight:500;
@@ -40,6 +40,7 @@ ul{
 
 a{
   text-decoration: none;
+  
  
 }
 
@@ -53,19 +54,19 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .reveal{
-  transform:translate(200px);
+  transform:translateY(200px);
   opacity:0;
   transition:all 2s ease;
 }
 
 .show{
-  transform: translate(0px);
+  transform: translateY(0px);
   opacity:1;
 }
 
 .grid{
   display: grid;
-  grid-template-columns: 3fr 4dr; 
+  grid-template-columns: 3fr 4fr; 
   justify-content: space-between;
   align-items: center;
   gap: 40px;
@@ -74,7 +75,7 @@ h1,h2,h3,h4,h5,h6{
 }
 
 .active{
-  color:var(--danger-color)
+  color: var(--danger-color) !important;
 }
 
 .scroll-top{

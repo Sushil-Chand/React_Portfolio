@@ -1,9 +1,9 @@
 .home{
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    overflow:hidden;
-    line-height:1;
+    align-items: center;
+    overflow: hidden;
+    line-height: 1;
     height: calc(100vh -5.5rem);
 }
 
@@ -18,7 +18,7 @@
 .home-title h2{
     margin-bottom: 1rem;
     transform: translateY(500px);
-    animation:slideUp 0.8s ease forwards 0.5s;
+    animation: slideUp 0.8s ease forwards 0.5s;
 }
 
 .home-title h1{
@@ -77,13 +77,13 @@
     left:0;
     width:100%;
     border: 1.8px solid #000;
-    transform: scale(0);
+    transform: scaleX(0);
     transition: transform 0.6s cubic-bezier(0.19,1,0.22,1);
     transform-origin: right center;
 }
 
 .link a:hover::after{
-    transform:scale(1);
+    transform:scaleX(1);
     transform-origin:left center;
     transition-duration: 0.4s;
     }
@@ -94,8 +94,9 @@
 }
 
 .scroll{
+    position: relative;
     transform:translateY(500px);
-    animation:slideUp 0.8s ease forwards 1.3s;
+    animation: slideUp 0.8s ease forwards 1.3s;
 }
 
 .scroll a span{
@@ -121,7 +122,7 @@
     position:absolute;
     top:5px;
     left: 45%;
-    width:2px;
+    width: 2px;
     height: 15px;
     background-color:#000;
     border-radius: 30%;
@@ -148,13 +149,13 @@
     content:"";
     position:absolute;
     inset:-10px 100px;
-    background-color: linear-gradient(#000,#000);
+    background: linear-gradient(#000,#000);
     transition:0.5s;
     animation: animatedCircle 4s linear infinite;
  
 }
 
-.circle::after{
+.circle::after {
     content:"";
     position: absolute;
     background-color: #fff;
@@ -168,7 +169,7 @@
     inset:30px;
     border:6px solid #000;
     z-index: 3;
-    border-radius:50%;
+    border-radius: 50%;
     display:flex;
     justify-content: center;
     align-items:center;
@@ -222,12 +223,12 @@
     letter-spacing: 3px;
 }
 
-.circle:hover::before{
+.circle:hover::before {
     inset: -20px 0px;
 }
 
 .circle:hover img {
-    opacity:0 ;
+    opacity: 0;
 }
 
 
@@ -275,7 +276,7 @@
         transform:rotate(0);
     }
 
-    1000%{
+    100%{
         transform:rotate(360deg);
     }
     
@@ -310,6 +311,7 @@
 }
 
 @media  screen and (max-width:768px) {
+    
     .home{
         flex-direction: column-reverse;
         justify-content: space-around;
@@ -319,7 +321,7 @@
         align-items: flex-start;
     }
 
-    .text-wrapper{
+    .text-wrapper p {
         width: 290px;
     }
 

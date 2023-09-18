@@ -2,7 +2,8 @@
     position: sticky;
     top:0;
     z-index:100;
-    padding-bottom: 50rem;
+    
+    
 }
 
 .navbar {
@@ -10,7 +11,7 @@
     width:100%;
     background-color: #fff;
     transition: top 0.3s ease-in-out;
-    transition: box-show 0.3s ease-in-out;
+    transition: box-shadow 0.3s ease-in-out;
     
 }
 
@@ -28,16 +29,15 @@
 
 .logo{
     display: flex;
-    color:#000;  
-   
-    
+    color:#000;    
 }
 
 
 .logo img{
-    width: 85px;
+    width: 65px;
 
 }
+
 .top{
     margin-left: 1rem;
     font-size:1.2rem;
@@ -60,7 +60,7 @@
 }
 
 .navbar-links ul{
-    margin-top: 1.5rem;
+  
     display:flex;
     align-items:center;
 }
@@ -71,11 +71,11 @@
 .navbar-links ul li a{
     color:#000;
     font-size:1.188rem;
-    transition:color 0.3s;
+    transition: color 0.3s;
 }
 
 .navbar-links ul li a:hover{
-    color:var(--danger-color);
+    color:var(-- danger-color);
 }
 
 .toggle-button{

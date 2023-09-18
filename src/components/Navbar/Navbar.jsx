@@ -29,14 +29,14 @@ const Navbar = () => {
   }, [windowWidth]); 
 
   useEffect(() => {
-    const handleScroll=()=>{
+    const handleScroll =() => {
       setIsScrolled(window.scrollY > 0);
     };
 
-    window.addEventListener("scroll",handleScroll)
+    window.addEventListener("scroll",handleScroll);
     
     return()=>{
-    window.removeEventListener("scroll",handleScroll);
+      window.removeEventListener("scroll",handleScroll);
     
     };
   },[]);
@@ -75,10 +75,10 @@ const Navbar = () => {
 
   const handleSectionClick = (event) => {
     event.preventDefault();
-    const sectionId = event.target.getAttribute("href").substring(1);
+    const sectionId = event.target.getAttribute('href').substring(1);
     const section = document.getElementById(sectionId);
     if (section) {
-      const navbarHeight = document.querySelector("nav").offsetHeight;
+      const navbarHeight = document.querySelector('nav').offsetHeight;
       const sectionTop = section.offsetTop - navbarHeight;
       window.scrollTo({
         top: sectionTop,
@@ -126,7 +126,7 @@ const Navbar = () => {
             </div>
             {windowWidth <= 890 && (
               <div
-                className={`${styles["toggle-button"]}${
+                className={`${styles["toggle-button"]} ${
                   showLinks ? styles.open : ""
                 }`}
                 onClick={toggleLinks}
