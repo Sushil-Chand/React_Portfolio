@@ -5,7 +5,7 @@ import NavbarLinks from "./NavbarLinks/NavbarLinks.jsx";
 const navLinks = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
-  { id: "skilss", label: "Skills" },
+  { id: "skills", label: "Skills" },
   { id: "portfolio", label: "Portfolio" },
   { id: "testimonial", label: "Testimonial" },
   { id: "contact", label: "Contact" },

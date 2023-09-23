@@ -12,7 +12,7 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return (
+  return ( 
     <section id="home">
       <div className="container">
         <div className={styles.home}>
