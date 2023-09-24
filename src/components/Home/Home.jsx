@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((PreIndex) => (PreIndex + 1) % items.length);
+      setCurrentIndex((PreIndex) => (PreIndex + 1) % 'items.length')
     }, 3000);
     return () => clearInterval(interval);
   }, []);
