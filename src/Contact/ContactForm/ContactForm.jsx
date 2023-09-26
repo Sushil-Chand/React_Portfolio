@@ -8,6 +8,7 @@ const ContactForm = () => {
 
 
     const handleInputChange =(event) =>{
+        console.log(event)
         const {name,value} = event.target;
         if (name==='name'){
             setEnteredName(value);
@@ -18,19 +19,41 @@ const ContactForm = () => {
             setEnteredMessage(value);
         }
 
-        }
     }
 
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        if (
+            enteredName.trim()===''||
+            enteredEmail.trim()===''||
+            enteredMessage.trim()===''
+        ){
+            return;
+        }
+
+        const formData = {
+            name:enteredName,
+            email:enteredEmail,
+            message:enteredMessage,
+        }
+
+        console.log(formData);
+    }
+    
+
   return(
-    <form>
+    <form onSubmit={handleSubmit}>
         <div className={styles["form-control"]}>
             <input type="text" name="name" placeholder="Name" 
                 value={enteredName} onChange={handleInputChange}
+                autoComplete="off"
             />
         </div>
         <div className={styles["form-control"]}>
             <input type="email" name="email" placeholder='Email'
                 value={enteredEmail} onChange={handleInputChange}
+                autoComplete="off"
             />
 
         </div>
